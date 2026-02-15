@@ -1,0 +1,10 @@
+"""Configuration constants."""
+
+INPUT_FILE = "reviews.csv"
+OUTPUT_FILE = "sitters.csv"
+
+MAX_ALPHABET_SIZE = 26
+MAX_PROFILE_SCORE = 5.0
+FULL_WEIGHT_THRESHOLD = 10
+
+FLOAT_PRECISION_EPSILON = 1e-12
