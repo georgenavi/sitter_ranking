@@ -1,0 +1,19 @@
+# Данные (опционально - если не хотите коммитить CSV)
+data/input/*.csv
+data/output/*.csv
+
+# Но сохраняем структуру папок
+!data/input/.gitkeep
+!data/output/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
