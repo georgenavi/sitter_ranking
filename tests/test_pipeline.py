@@ -1,8 +1,5 @@
-"""Test end-to-end data processing pipeline."""
-
 import pytest
 import csv
-from pathlib import Path
 from source.csv_reader import load_sitters
 from source.csv_writer import save_sitters
 
