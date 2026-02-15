@@ -2,7 +2,7 @@
 
 import csv
 from typing import Dict
-from models import Sitter
+from .models import Sitter
 
 
 def load_sitters(filepath: str) -> Dict[str, Sitter]:

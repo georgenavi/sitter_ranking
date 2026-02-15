@@ -1,4 +1,4 @@
-from source.config import MAX_ALPHABET_SIZE, MAX_PROFILE_SCORE, FULL_WEIGHT_THRESHOLD
+from .config import MAX_ALPHABET_SIZE, MAX_PROFILE_SCORE, FULL_WEIGHT_THRESHOLD
 
 
 def count_distinct_letters(name: str) -> int:

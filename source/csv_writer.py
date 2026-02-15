@@ -1,8 +1,8 @@
 import csv
 from typing import List
-from models import Sitter
-from scoring import calculate_profile_score, calculate_search_score
-from utils import round2
+from .models import Sitter
+from .scoring import calculate_profile_score, calculate_search_score
+from .utils import round2
 
 
 def save_sitters(sitters: List[Sitter], filepath: str) -> None:
