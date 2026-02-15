@@ -1,4 +1,4 @@
-from config import INPUT_FILE, OUTPUT_FILE
+from source.config import INPUT_FILE, OUTPUT_FILE
 from csv_reader import load_sitters
 from csv_writer import save_sitters
 

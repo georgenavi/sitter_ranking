@@ -1,6 +1,6 @@
 """Utility functions."""
 
-from config import FLOAT_PRECISION_EPSILON
+from source.config import FLOAT_PRECISION_EPSILON
 
 
 def round2(x: float) -> float:
