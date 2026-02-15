@@ -10,22 +10,23 @@ from source.csv_writer import save_sitters
 @pytest.fixture
 def sample_reviews(tmp_path):
     """Create sample CSV with various scenarios."""
-    csv_content = """sitter_email,sitter,rating
-veteran@example.com,Veteran Sitter,5.0
-veteran@example.com,Veteran Sitter,4.5
-veteran@example.com,Veteran Sitter,5.0
-veteran@example.com,Veteran Sitter,4.5
-veteran@example.com,Veteran Sitter,5.0
-veteran@example.com,Veteran Sitter,4.5
-veteran@example.com,Veteran Sitter,5.0
-veteran@example.com,Veteran Sitter,4.5
-veteran@example.com,Veteran Sitter,5.0
-veteran@example.com,Veteran Sitter,4.5
-newbie@example.com,Newbie Sitter,5.0
-nobody@example.com,Nobody Sitter,
-"""
     input_file = tmp_path / "reviews.csv"
-    input_file.write_text(csv_content)
+
+    with open(input_file, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['sitter_email', 'sitter', 'rating'])
+
+        # Veteran: 10 reviews alternating 5.0 and 4.5
+        for i in range(10):
+            rating = 5.0 if i % 2 == 0 else 4.5
+            writer.writerow(['veteran@example.com', 'Veteran Sitter', rating])
+
+        # Newbie: 1 perfect review
+        writer.writerow(['newbie@example.com', 'Newbie Sitter', 5.0])
+
+        # Nobody: no rating
+        writer.writerow(['nobody@example.com', 'Nobody Sitter', ''])
+
     return input_file, tmp_path
 
 
