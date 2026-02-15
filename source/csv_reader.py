@@ -1,5 +1,3 @@
-"""Load sitter data from CSV."""
-
 import csv
 from typing import Dict
 from .models import Sitter
