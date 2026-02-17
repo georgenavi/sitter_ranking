@@ -25,7 +25,7 @@ pip3 install -r requirements.txt
 ```bash
 # Place reviews.csv in data/input/
 # Run the script
-python3 -m source.run
+python3 -m run
 # Results will be in data/output/sitters.csv
 ```
 
